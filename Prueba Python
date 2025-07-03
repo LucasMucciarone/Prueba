@@ -1,0 +1,11 @@
+import datetime
+
+# Ajustar la configuración regional a español (si está disponible en tu sistema)
+import locale
+try:
+    locale.setlocale(locale.LC_TIME, 'es_ES.UTF-3')
+except locale.Error:
+    pass  # Se mantiene la configuración regional por defecto si la anterior no existe
+
+hoy = datetime.datetime.now()
+print(hoy.strftime('%A, %d de %B de %Y'))
